@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'blog.apps.BlogConfig',
     'account.apps.AccountConfig',
+    'likes.apps.LikesConfig',
 ]
 
 REST_FRAMEWORK = {

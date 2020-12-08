@@ -1,13 +1,16 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework import permissions
+
+from likes.mixins import LikedMixin 
 
 from .models import Post
 from .serializers import PostSerializer
 
 
-# class PostList(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = PostSerializer
+class PostViewSet(LikedMixin ,viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = (permissions.IsAuthenticated,)
 
 
 class PostCreateView(generics.ListCreateAPIView):
