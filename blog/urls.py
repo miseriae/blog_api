@@ -4,5 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.PostList.as_view())
+    path('', views.PostCreateView.as_view()),
+    path('<int:id>/', views.PostDetailView.as_view()),
+
 ]
