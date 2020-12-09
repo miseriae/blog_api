@@ -31,4 +31,3 @@ class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Post.objects.filter(author=self.request.user)
-
