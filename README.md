@@ -6,7 +6,7 @@ GET  http://127.0.0.1:8000/api/posts/{post id}/ - get post detail
 
 POST http://127.0.0.1:8000/api/ - create post 
 
-POST http://127.0.0.1:8000/api/posts/{post id}/ - like selected post 
+POST http://127.0.0.1:8000/api/posts/{post id}/like/ - like selected post 
 
 POST http://127.0.0.1:8000/api/posts/{post id}/unlike/ - unlike selected post 
 
